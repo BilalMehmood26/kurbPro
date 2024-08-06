@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.weeklytimesheet.TimeSheetFragment">
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/bottom_round_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weekly_timesheet"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:fontFamily="@font/montserrat_medium_italic"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:padding="@dimen/_10sdp"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_bg_light_grey">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/thursday_11_jan_2024"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintBottom_toBottomOf="@+id/city_tv"
+                app:layout_constraintEnd_toStartOf="@+id/city_tv"
+                app:layout_constraintTop_toTopOf="@+id/city_tv" />
+
+            <TextView
+                android:id="@+id/city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/new_york"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/check_in"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/break_tv"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/check_out"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+            <TextView
+                android:id="@+id/check_out_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="09:00"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/break_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="30min"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/textView8"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/check_out_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="18:00"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logout_btn_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:layout_marginEnd="@dimen/_17sdp"
+        android:layout_marginStart="@dimen/_17sdp"
+        app:layout_constraintTop_toBottomOf="@+id/logout_btn">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/input_bg_light_grey">
+
+            <TextView
+                android:id="@+id/textView_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/thursday_11_jan_2024"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:src="@drawable/ic_pin"
+                app:layout_constraintBottom_toBottomOf="@+id/city_tv_1"
+                app:layout_constraintEnd_toStartOf="@+id/city_tv_1"
+                app:layout_constraintTop_toTopOf="@+id/city_tv_1" />
+
+            <TextView
+                android:id="@+id/city_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/new_york"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/check_in"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/textView_5"
+                app:layout_constraintTop_toBottomOf="@+id/textView_5" />
+
+            <TextView
+                android:id="@+id/textView7_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/break_tv"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toStartOf="@+id/textView8_1"
+                app:layout_constraintStart_toEndOf="@+id/textView6_1"
+                app:layout_constraintTop_toBottomOf="@+id/textView_5" />
+
+            <TextView
+                android:id="@+id/textView8_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/check_out"
+                android:textColor="@color/hint_grey"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7_1"
+                app:layout_constraintTop_toBottomOf="@+id/textView_5" />
+
+
+            <TextView
+                android:id="@+id/check_out_time_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="09:00"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="@+id/textView_5"
+                app:layout_constraintTop_toBottomOf="@+id/textView6_1" />
+
+            <TextView
+                android:id="@+id/break_time_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="30min"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@+id/textView8_1"
+                app:layout_constraintStart_toEndOf="@+id/textView6_1"
+                app:layout_constraintTop_toBottomOf="@+id/textView7_1" />
+
+            <TextView
+                android:id="@+id/check_out_time_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="17:30"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7_1"
+                app:layout_constraintTop_toBottomOf="@+id/textView8_1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

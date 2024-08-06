@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.main.home.HomeFragment">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/bottom_round_corner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium_italic"
+        android:text="@string/home"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_17sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_17sdp"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_1sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_bg_light_grey">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_17sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/add_weekly_timesheet"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/description_il"
+                        style="@style/TextInputLayout.grey.Primary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_12ssp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:background="@drawable/input_bg"
+                        android:padding="@dimen/_1sdp"
+                        app:endIconMode="clear_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/surname_et"
+                            style="@style/TextInputLayout.EditText.Primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/description"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:text=""
+                            app:hintTextColor="@color/hint_grey" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/date_il"
+                        style="@style/TextInputLayout.grey.Primary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@drawable/input_bg"
+                        android:padding="@dimen/_1sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        app:endIconMode="clear_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/description_il">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/date_et"
+                            style="@style/TextInputLayout.EditText.Primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/date"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:text=""
+                            app:hintTextColor="@color/hint_grey" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                <!--    <View
+                        android:id="@+id/view3"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/input_bg_grey"
+                        app:layout_constraintBottom_toBottomOf="@+id/date_il"
+                        app:layout_constraintEnd_toEndOf="@+id/description_il"
+                        app:layout_constraintTop_toTopOf="@+id/date_il" />-->
+
+                    <!--<ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/ic_add"
+                        app:layout_constraintBottom_toBottomOf="@+id/view3"
+                        app:layout_constraintEnd_toEndOf="@+id/view3"
+                        app:layout_constraintStart_toStartOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/view3" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/start_time_il"
+                        style="@style/TextInputLayout.grey.Primary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:background="@drawable/input_bg"
+                        android:padding="@dimen/_1sdp"
+                        app:endIconMode="clear_text"
+                        app:layout_constraintEnd_toStartOf="@+id/end_time_il"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/date_il">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/start_time_et"
+                            style="@style/TextInputLayout.EditText.Primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/start_time"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:text=""
+                            app:hintTextColor="@color/hint_grey" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/end_time_il"
+                        style="@style/TextInputLayout.grey.Primary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:background="@drawable/input_bg"
+                        android:padding="@dimen/_1sdp"
+                        app:endIconMode="clear_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/start_time_il"
+                        app:layout_constraintTop_toBottomOf="@+id/date_il">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/end_time_et"
+                            style="@style/TextInputLayout.EditText.Primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/end_time"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:text=""
+                            app:hintTextColor="@color/hint_grey" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/break_time_il"
+                        style="@style/TextInputLayout.grey.Primary"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:background="@drawable/input_bg"
+                        android:padding="@dimen/_1sdp"
+                        app:endIconMode="clear_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/start_time_il">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/break_time_et"
+                            style="@style/TextInputLayout.EditText.Primary"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="00:30"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:text=""
+                            app:hintTextColor="@color/hint_grey" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/update_btn"
+                        style="@style/Button.14sp.Primary_Login_Button"
+                        android:layout_marginStart="@dimen/_50sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_50sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:text="@string/save_timesheet"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/break_time_il" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/weekly_timesheet"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="@+id/logout_btn"
+                app:layout_constraintTop_toBottomOf="@+id/logout_btn" />
+
+            <TextView
+                android:id="@+id/view_all_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:fontFamily="@font/montserrat_medium_italic"
+                android:text="@string/view_all"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView9"
+                app:layout_constraintEnd_toEndOf="@+id/logout_btn"
+                app:layout_constraintTop_toBottomOf="@+id/logout_btn" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/time_sheet_item"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_1sdp"
+                app:layout_constraintEnd_toEndOf="@+id/view_all_btn"
+                app:layout_constraintStart_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_bg_light_grey">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/thursday_11_jan_2024"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:src="@drawable/ic_pin"
+                        app:layout_constraintBottom_toBottomOf="@+id/city_tv"
+                        app:layout_constraintEnd_toStartOf="@+id/city_tv"
+                        app:layout_constraintTop_toTopOf="@+id/city_tv" />
+
+                    <TextView
+                        android:id="@+id/city_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/new_york"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/check_in"
+                        android:textColor="@color/hint_grey"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/break_tv"
+                        android:textColor="@color/hint_grey"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView8"
+                        app:layout_constraintStart_toEndOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/check_out"
+                        android:textColor="@color/hint_grey"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+                    <TextView
+                        android:id="@+id/check_out_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="09:00"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="@+id/textView5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    <TextView
+                        android:id="@+id/break_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="30min"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView8"
+                        app:layout_constraintStart_toEndOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                    <TextView
+                        android:id="@+id/check_out_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="18:00"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView7"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/logout_btn_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/time_sheet_item"
+                app:layout_constraintStart_toStartOf="@+id/time_sheet_item"
+                app:layout_constraintTop_toBottomOf="@+id/time_sheet_item">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/input_bg_light_grey">
+
+                    <TextView
+                        android:id="@+id/textView_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="@string/thursday_11_jan_2024"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:src="@drawable/ic_pin"
+                        app:layout_constraintBottom_toBottomOf="@+id/city_tv_1"
+                        app:layout_constraintEnd_toStartOf="@+id/city_tv_1"
+                        app:layout_constraintTop_toTopOf="@+id/city_tv_1" />
+
+                    <TextView
+                        android:id="@+id/city_tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/new_york"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/check_in"
+                        android:textColor="@color/hint_grey"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintStart_toStartOf="@+id/textView_5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_5" />
+
+                    <TextView
+                        android:id="@+id/textView7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/break_tv"
+                        android:textColor="@color/hint_grey"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView8_1"
+                        app:layout_constraintStart_toEndOf="@+id/textView6_1"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_5" />
+
+                    <TextView
+                        android:id="@+id/textView8_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="@string/check_out"
+                        android:textColor="@color/hint_grey"
+                        android:textSize="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView7_1"
+                        app:layout_constraintTop_toBottomOf="@+id/textView_5" />
+
+
+                    <TextView
+                        android:id="@+id/check_out_time_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="09:00"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="@+id/textView_5"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6_1" />
+
+                    <TextView
+                        android:id="@+id/break_time_tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="30min"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/textView8_1"
+                        app:layout_constraintStart_toEndOf="@+id/textView6_1"
+                        app:layout_constraintTop_toBottomOf="@+id/textView7_1" />
+
+                    <TextView
+                        android:id="@+id/check_out_time_tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium_italic"
+                        android:text="18:00"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_12sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textView7_1"
+                        app:layout_constraintTop_toBottomOf="@+id/textView8_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_timeSheetFragment"
+            app:destination="@id/timeSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.chatlist.ChatListFragment"
+        android:label="fragment_chat_list"
+        tools:layout="@layout/fragment_chat_list" >
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_chatListFragment_to_groupChatFragment"
+            app:destination="@id/groupChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment2_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.editProfile.EditProfileFragment"
+        android:label="fragment_edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+    <fragment
+        android:id="@+id/timeSheetFragment"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.weeklytimesheet.TimeSheetFragment"
+        android:label="fragment_time_sheet"
+        tools:layout="@layout/fragment_time_sheet" />
+    <fragment
+        android:id="@+id/groupChatFragment"
+        android:name="com.buzztech.kurbplaceradmin.ui.main.groupChat.GroupChatFragment"
+        android:label="fragment_group_chat"
+        tools:layout="@layout/fragment_group_chat" />
+</navigation>
